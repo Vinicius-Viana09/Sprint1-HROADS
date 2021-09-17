@@ -16,6 +16,11 @@ VALUES (1, 1), (1, 2), (2, 2), (3, 1), (4, 2), (4, 3), (5, NULL), (6, 3), (7, NU
 INSERT INTO PERSONAGEM(idClasse, nomePersonagem, nomeJogador, Vida, Mana, dataCriacao, dataAtualizacao)
 VALUES (1, 'DeuBug', 'Josias', 100, 80, '18/01/2019', '10/08/2021'), (4, 'BitBug', 'Lucas', 70, 100, '17/03/2016', '10/08/2021'), (7, 'Fer8', 'Saulo', 75, 60, '18/03/2018', '10/08/2021')
 
+INSERT INTO TIPOUSUARIO(nomeTipoUsuario)
+VALUES ('Administrador'), ('Jogador')
+
+INSERT INTO USUARIO(idTipoUsuario, nomeUsuario, emailUsuario, senhaUsuario)
+VALUES (1,'Adm','adm@gmail.com','adm005'), (2,'Jogador','jogador@gmail.com','jogador1')
 
 UPDATE PERSONAGEM
 SET nomePersonagem = 'Fer7'
