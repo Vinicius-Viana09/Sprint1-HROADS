@@ -1,4 +1,5 @@
-﻿using senai.hroads.webApi.Domains;
+﻿using senai.hroads.webApi.Contexts;
+using senai.hroads.webApi.Domains;
 using senai.hroads.webApi.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -9,29 +10,46 @@ namespace senai.hroads.webApi.Repositories
 {
     public class TipoRepository : ITipo
     {
+        HroadsContext ctx = new HroadsContext();
+
         public void Atualizar(int idTipo, Tipo tipoAtualizado)
         {
-            throw new NotImplementedException();
+            Tipo tipoBuscado = BuscarPorId(idTipo);
+
+            if (tipoAtualizado.NomeTipo != null)
+            {
+                tipoBuscado.NomeTipo = tipoAtualizado.NomeTipo;
+            }
+
+            ctx.Tipos.Update(tipoBuscado);
+
+            ctx.SaveChanges();
         }
 
         public Tipo BuscarPorId(int idTipo)
         {
-            throw new NotImplementedException();
+            return ctx.Tipos.FirstOrDefault(e => e.IdTipo == idTipo);
         }
 
         public void Cadastrar(Tipo novoTipo)
         {
-            throw new NotImplementedException();
+            ctx.Tipos.Add(novoTipo);
+
+            ctx.SaveChanges();
         }
 
         public void Deletar(int idTipo)
         {
-            throw new NotImplementedException();
+            Tipo tipoBuscado = BuscarPorId(idTipo);
+
+            ctx.Tipos.Remove(tipoBuscado);
+
+            ctx.SaveChanges();
         }
 
         public List<Tipo> Listar()
         {
-            throw new NotImplementedException();
+            return ctx.Tipos.ToList();
         }
     }
 }

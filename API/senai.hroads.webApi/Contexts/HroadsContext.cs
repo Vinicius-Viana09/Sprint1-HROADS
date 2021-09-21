@@ -110,7 +110,7 @@ namespace senai.hroads.webApi.Contexts
 
             modelBuilder.Entity<Personagem>(entity =>
             {
-                entity.HasKey(e => e.IdPersoagem)
+                entity.HasKey(e => e.IdPersonagem)
                     .HasName("PK__PERSONAG__02B7D48C84F25418");
 
                 entity.ToTable("PERSONAGEM");

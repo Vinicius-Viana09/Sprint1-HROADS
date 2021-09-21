@@ -1,4 +1,5 @@
-﻿using senai.hroads.webApi.Domains;
+﻿using senai.hroads.webApi.Contexts;
+using senai.hroads.webApi.Domains;
 using senai.hroads.webApi.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -9,29 +10,46 @@ namespace senai.hroads.webApi.Repositories
 {
     public class TipoUsuarioRepository : ITipoUsuario
     {
+        HroadsContext ctx = new HroadsContext();
+
         public void Atualizar(int IdTipoUsuario, Tipousuario tipousuariosAtualizado)
         {
-            throw new NotImplementedException();
+            Tipousuario tipousuarioBuscado = BuscarPorId(IdTipoUsuario);
+
+            if (tipousuariosAtualizado.NomeTipoUsuario != null)
+            {
+                tipousuarioBuscado.NomeTipoUsuario = tipousuariosAtualizado.NomeTipoUsuario;
+            }
+
+            ctx.Tipousuarios.Update(tipousuarioBuscado);
+
+            ctx.SaveChanges();
         }
 
         public Tipousuario BuscarPorId(int IdTipoUsuario)
         {
-            throw new NotImplementedException();
+            return ctx.Tipousuarios.FirstOrDefault(e => e.IdTipoUsuario == IdTipoUsuario);
         }
 
         public void Cadastrar(Tipousuario novoTipoUsuario)
         {
-            throw new NotImplementedException();
+            ctx.Tipousuarios.Add(novoTipoUsuario);
+
+            ctx.SaveChanges();
         }
 
         public void Deletar(int IdTipoUsuario)
         {
-            throw new NotImplementedException();
+            Tipousuario tipousuarioBuscado = BuscarPorId(IdTipoUsuario);
+
+            ctx.Tipousuarios.Remove(tipousuarioBuscado);
+
+            ctx.SaveChanges();
         }
 
         public List<Tipousuario> Listar()
         {
-            throw new NotImplementedException();
+            return ctx.Tipousuarios.ToList();
         }
     }
 }

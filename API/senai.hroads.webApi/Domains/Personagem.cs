@@ -17,5 +17,6 @@ namespace senai.hroads.webApi.Domains
         public string DataAtualizacao { get; set; }
 
         public virtual Classe IdClasseNavigation { get; set; }
+        public object IdPersoagem { get; internal set; }
     }
 }

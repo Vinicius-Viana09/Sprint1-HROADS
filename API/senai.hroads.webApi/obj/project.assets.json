@@ -7358,19 +7358,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\fic\\.nuget\\packages\\": {}
+    "C:\\Users\\Usuario\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\fic\\Desktop\\Sprint1-HROADS\\API\\senai.hroads.webApi\\senai.hroads.webApi..csproj",
+      "projectUniqueName": "C:\\Users\\Usuario\\Desktop\\Sprint1-HROADS\\API\\senai.hroads.webApi\\senai.hroads.webApi..csproj",
       "projectName": "senai.hroads.webApi.",
-      "projectPath": "C:\\Users\\fic\\Desktop\\Sprint1-HROADS\\API\\senai.hroads.webApi\\senai.hroads.webApi..csproj",
-      "packagesPath": "C:\\Users\\fic\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\fic\\Desktop\\Sprint1-HROADS\\API\\senai.hroads.webApi\\obj\\",
+      "projectPath": "C:\\Users\\Usuario\\Desktop\\Sprint1-HROADS\\API\\senai.hroads.webApi\\senai.hroads.webApi..csproj",
+      "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Usuario\\Desktop\\Sprint1-HROADS\\API\\senai.hroads.webApi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\fic\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -7429,7 +7429,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }
