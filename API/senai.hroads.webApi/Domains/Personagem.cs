@@ -7,7 +7,7 @@ namespace senai.hroads.webApi.Domains
 {
     public partial class Personagem
     {
-        public int IdPersoagem { get; set; }
+        public int IdPersonagem { get; set; }
         public byte? IdClasse { get; set; }
         public string NomePersonagem { get; set; }
         public string NomeJogador { get; set; }

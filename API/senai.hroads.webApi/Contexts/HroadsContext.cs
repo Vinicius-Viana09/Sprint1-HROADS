@@ -21,7 +21,7 @@ namespace senai.hroads.webApi.Contexts
         public virtual DbSet<Classe> Classes { get; set; }
         public virtual DbSet<Habilidade> Habilidades { get; set; }
         public virtual DbSet<Habilidadeclasse> Habilidadeclasses { get; set; }
-        public virtual DbSet<Personagem> Personagems { get; set; }
+        public virtual DbSet<Personagem> Personagens { get; set; }
         public virtual DbSet<Tipo> Tipos { get; set; }
         public virtual DbSet<Tipousuario> Tipousuarios { get; set; }
         public virtual DbSet<Usuario> Usuarios { get; set; }
@@ -147,7 +147,7 @@ namespace senai.hroads.webApi.Contexts
                     .HasColumnName("nomePersonagem");
 
                 entity.HasOne(d => d.IdClasseNavigation)
-                    .WithMany(p => p.Personagems)
+                    .WithMany(p => p.Personagens)
                     .HasForeignKey(d => d.IdClasse)
                     .HasConstraintName("FK__PERSONAGE__idCla__4222D4EF");
             });

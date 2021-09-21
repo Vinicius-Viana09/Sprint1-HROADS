@@ -19,4 +19,3 @@ namespace senai.hroads.webApi.Interfaces
         void Deletar(int idHabilidadeclasses);
     }
 }
-}
